@@ -1,0 +1,19 @@
+read n
+flag=1
+for((i=2;i<n;i++))
+do
+	m=`expr $n % $i`
+	if test $m -eq 0
+	then
+		flag=0
+		#echo "$flag"
+	fi
+done
+if test $flag -eq 0
+then	
+	echo "not prime"
+else
+	echo "prime"
+fi
+
+

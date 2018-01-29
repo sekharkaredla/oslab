@@ -1,0 +1,19 @@
+read n
+k=$n
+s=0
+r=0
+ar=0
+while test $n -ne 0
+do
+	r=`expr $n % 10`
+	s=`expr $r \* $r`
+	s=`expr $s \* $r`
+	ar=`expr $ar + $s`
+	n=`expr $n / 10`
+done
+if test $ar -eq $k
+then
+	echo "armstrong"
+else
+	echo "not armstrong"
+fi
